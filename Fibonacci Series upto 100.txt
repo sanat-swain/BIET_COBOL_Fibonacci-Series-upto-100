@@ -1,0 +1,63 @@
+
+        IDENTIFICATION DIVISION.
+        PROGRAM-ID. FIBONACCI.
+
+        ENVIRONMENT DIVISION.
+        DATA DIVISION.
+
+        WORKING-STORAGE SECTION.
+        77 N  PIC 9(18).
+        77 N1 PIC Z(18).
+        77 M  PIC 9(18) VALUE 1.
+        77 O  PIC 9(18).
+        77 I  PIC 9(4) VALUE 1.
+        77 Q  PIC X.
+
+        PROCEDURE DIVISION.
+        PARA-A.
+                DISPLAY ( 1 , 1 ) ERASE.
+                DISPLAY ( 2 , 1 ) "FIBONACCI NUMBERS FROM 1 TO 100 
+ARE:".
+                MOVE 0 TO N.
+                DISPLAY " ".
+                DISPLAY 0.
+                DISPLAY 1.
+                MOVE 0 TO O.
+
+        PARA-B.
+
+                COMPUTE N = O + M.
+                MOVE N TO N1.
+                MOVE M TO O.
+                MOVE N TO M.
+                DISPLAY N1.
+                ADD 1 TO I.
+                IF I = 21
+                        DISPLAY "PRESS TAB KEY TO VIEW NEXT PAGE."
+                        ACCEPT Q.
+
+
+                IF I = 41
+                        DISPLAY "PRESS TAB KEY TO VIEW NEXT PAGE."
+                        ACCEPT Q.
+
+
+                IF I = 61
+                        DISPLAY "PRESS TAB KEY TO VIEW NEXT PAGE."
+                        ACCEPT Q.
+
+
+                IF I = 81
+                        DISPLAY "PRESS TAB KEY TO VIEW NEXT PAGE."
+                        ACCEPT Q.
+
+
+                IF I = 99
+                        GO TO STOP-PARA
+                ELSE
+                        GO TO PARA-B.
+
+
+        STOP-PARA.
+                DISPLAY " ".
+                STOP RUN.
